@@ -1,0 +1,32 @@
+﻿@*
+  Layout đơn giản dành riêng cho Login / Register
+  Sử dụng Tailwind CSS, thiết kế giữa màn hình, bo góc, đổ bóng
+*@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Đăng nhập</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
+        <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold text-blue-700">HỆ THỐNG GỬI XE</h1>
+            <p class="text-gray-500 text-sm">Vui lòng đăng nhập để tiếp tục</p>
+        </div>
+
+        @RenderBody()
+
+        @RenderSection("Scripts", required: false)
+    </div>
+
+    <!-- Scripts đặt sau div và trước </body> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
+    
